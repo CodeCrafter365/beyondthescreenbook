@@ -1,4 +1,26 @@
 <!doctype html>
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  PRODUCTION DEPLOY NOTES — read before editing
+  ═══════════════════════════════════════════════════════════════════
+  POLAR CHECKOUT URL (live, connected): 
+    https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4
+
+  This URL appears in 5 places. If you regenerate the page or rewrite
+  sections, preserve the URL in ALL of them. Search for "polar.sh" 
+  to find every instance.
+
+    1. JSON-LD structured data — schema.org Product offers.url
+    2. Sticky nav header — small CTA button (top right)
+    3. Hero section — primary "Get the book — $29" button
+    4. Offer section — main CTA next to the price block
+    5. Final close section — last CTA before footer
+
+  IMAGES (live in repo root):
+    cover.webp           → book cover (hero, right side)
+    Author_Photo.webp    → Polly's headshot (About section)
+  ═══════════════════════════════════════════════════════════════════
+-->
 <html lang="en-AU">
 <head>
 <meta charset="utf-8" />
@@ -35,7 +57,7 @@
   "inLanguage": "en-AU",
   "offers": {
     "@type": "Offer",
-    "url": "{{POLAR_CHECKOUT_URL}}",
+    "url": "https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4",
     "priceCurrency": "USD",
     "price": "29.00",
     "availability": "https://schema.org/InStock"
@@ -243,7 +265,7 @@
       <a href="#offer"     class="hover:text-ochre transition-colors">Get the book</a>
       <a href="#faq"       class="hover:text-ochre transition-colors">FAQ</a>
     </nav>
-    <a href="{{POLAR_CHECKOUT_URL}}" class="cta !py-2.5 !px-4 !text-sm">
+    <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta !py-2.5 !px-4 !text-sm">
       Get the book — $29
     </a>
   </div>
@@ -271,7 +293,7 @@
         </p>
 
         <div class="mt-10 flex flex-wrap items-center gap-5">
-          <a href="{{POLAR_CHECKOUT_URL}}" class="cta">
+          <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta">
             Get the book — $29
             <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
               <path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -839,7 +861,7 @@
             <p class="text-sm text-ink2/70 mt-2">Instant PDF download. Buy now, every future update is yours free.</p>
             <p class="text-sm text-ink2/70 mt-3 italic max-w-md">Try one activity. If it doesn't work on the first go, email me — I'll refund you and tell you which one would have. I keep records.</p>
           </div>
-          <a href="{{POLAR_CHECKOUT_URL}}" class="cta self-start sm:self-auto whitespace-nowrap">
+          <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta self-start sm:self-auto whitespace-nowrap">
             Get the book — $29
             <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
               <path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -865,11 +887,11 @@
         <p class="caps text-sage mb-4">About the author</p>
         <h2 class="display text-3xl sm:text-4xl text-ink mb-6">Polly Hayes</h2>
 
-        <p class="text-ink2 text-lg leading-relaxed pretty mb-5">This book was written on a kitchen floor in 2024, at 5:13&nbsp;pm on a Tuesday, after I handed my three-year-old the iPad for the second time that afternoon and cried about it — not from guilt, but from how <em class="font-serif italic">predictable</em> it had become. Same time, same fog, same surrender. I'm a former primary-school teacher with a decade of watching kids light up at the simplest things — a torch, a sock, a piece of masking tape — and there I was, out of ideas at the worst possible hour. That night I started making the matrix.</p>
+        <p class="text-ink2 text-lg leading-relaxed pretty mb-5">This book was written on a kitchen floor in 2024, at 5:13&nbsp;pm on a Tuesday, after I handed my three-year-old the iPad for the second time that afternoon and cried — not from guilt, but from how <em class="font-serif italic">predictable</em> it had become. I'd been a primary-school teacher for a decade — and there I was, out of ideas at the worst possible hour. That night I started making the matrix.</p>
 
-        <p class="text-ink2 text-lg leading-relaxed pretty mb-5">Over the next two years I tested every activity with the parents who read my newsletter — around <strong class="text-ink">1,400 families</strong> — and only the 101 that worked again and again, in real homes at the actual witching hour, made the cut. About 240 didn't.</p>
+        <p class="text-ink2 text-lg leading-relaxed pretty mb-5">Over two years I tested every activity with around <strong class="text-ink">1,400 families</strong> from my newsletter. Only the 101 that worked again and again made the cut. About 240 didn't.</p>
 
-        <p class="text-ink2 text-lg leading-relaxed pretty"><em class="font-serif italic">Beyond the Screen</em> is the book I wish someone had handed me on that floor. Every activity is built from things you already own. Every one has been tested on children who don't pretend to enjoy things, and written for parents who are too tired to read anything longer than one page. No glue guns. No Target runs. The matrix on page one is the whole point — the activities are the rest.</p>
+        <p class="text-ink2 text-lg leading-relaxed pretty"><em class="font-serif italic">Beyond the Screen</em> is the book I wish someone had handed me on that floor.</p>
 
         <blockquote class="mt-8 border-l-2 border-ochre pl-5 font-serif italic text-xl text-ink2 pretty">
           "Trust the kid in front of you over the number on the page."
@@ -1026,7 +1048,7 @@
           The matrix on the fridge. The right activity in fifteen seconds. The quiet evening you've been chasing for months — sitting on the other side of one PDF.
         </p>
 
-        <a href="{{POLAR_CHECKOUT_URL}}" class="cta mt-10 !text-base !py-4 !px-7">
+        <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta mt-10 !text-base !py-4 !px-7">
           Get the book — $29
           <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
             <path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
