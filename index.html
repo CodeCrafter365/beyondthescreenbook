@@ -1,26 +1,4 @@
 <!doctype html>
-<!--
-  ═══════════════════════════════════════════════════════════════════
-  PRODUCTION DEPLOY NOTES — read before editing
-  ═══════════════════════════════════════════════════════════════════
-  POLAR CHECKOUT URL (live, connected): 
-    https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4
-
-  This URL appears in 5 places. If you regenerate the page or rewrite
-  sections, preserve the URL in ALL of them. Search for "polar.sh" 
-  to find every instance.
-
-    1. JSON-LD structured data — schema.org Product offers.url
-    2. Sticky nav header — small CTA button (top right)
-    3. Hero section — primary "Get the book — $29" button
-    4. Offer section — main CTA next to the price block
-    5. Final close section — last CTA before footer
-
-  IMAGES (live in repo root):
-    cover.webp           → book cover (hero, right side)
-    Author_Photo.webp    → Polly's headshot (About section)
-  ═══════════════════════════════════════════════════════════════════
--->
 <html lang="en-AU">
 <head>
 <meta charset="utf-8" />
@@ -31,7 +9,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="book" />
 <meta property="og:title" content="Beyond the Screen — 101 Tech-Free Boredom Busters" />
-<meta property="og:description" content="101 screen-free activities for kids 3–10, sorted by mess level and prep time. Find the right one in 15 seconds." />
+<meta property="og:description" content="The 4:47 Sheet that goes on the fridge. 101 screen-free activities sorted by mess and prep time — find the right one in 15 seconds. Instant PDF, $19." />
 <meta property="og:url" content="{{SITE_URL}}" /> <!-- PLACEHOLDER -->
 <meta property="og:image" content="{{OG_IMAGE_URL}}" /> <!-- PLACEHOLDER -->
 <meta property="og:site_name" content="Beyond the Screen" />
@@ -49,7 +27,7 @@
   "@type": "Product",
   "name": "Beyond the Screen — 101 Tech-Free Boredom Busters",
   "image": "{{COVER_IMAGE_URL}}",
-  "description": "A practical guide for tired parents. 101 screen-free activities for kids 3–10, sorted by mess level and prep time, with a one-page matrix cheat sheet.",
+  "description": "A practical guide for tired parents. 101 screen-free activities for kids 3–10, sorted by mess level and prep time, with The 4:47 Sheet — a one-page cheat sheet for the fridge.",
   "brand": { "@type": "Brand", "name": "Beyond the Screen" },
   "author": { "@type": "Person", "name": "Polly Hayes" },
   "bookFormat": "https://schema.org/EBook",
@@ -59,7 +37,7 @@
     "@type": "Offer",
     "url": "https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4",
     "priceCurrency": "USD",
-    "price": "29.00",
+    "price": "19.00",
     "availability": "https://schema.org/InStock"
   }
 }
@@ -248,841 +226,303 @@
 
 <body class="paper-grain">
 
-<!-- ════════════ STICKY HEADER ════════════ -->
+<!-- ════════════ STICKY HEADER — persistent CTA + CONDITIONS (qualification) ════════════ -->
 <header class="nav fixed top-0 inset-x-0 z-50 border-b border-transparent">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
-    <a href="#top" class="flex items-center gap-2 group" aria-label="Beyond the Screen — home">
-      <!-- small mark -->
-      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true">
+  <div class="max-w-3xl mx-auto px-5 h-14 flex items-center justify-between">
+    <span class="flex items-center gap-2">
+      <svg width="20" height="20" viewBox="0 0 22 22" aria-hidden="true">
         <circle cx="11" cy="11" r="10" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
         <path d="M5 11 Q 11 4, 17 11 Q 11 18, 5 11 Z" fill="none" stroke="#C8881F" stroke-width="1.2"/>
       </svg>
-      <span class="font-serif text-[1.05rem] tracking-tight text-ink">Beyond the Screen</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-7 text-sm text-ink2">
-      <a href="#mechanism" class="hover:text-ochre transition-colors">The system</a>
-      <a href="#inside"    class="hover:text-ochre transition-colors">What's inside</a>
-      <a href="#offer"     class="hover:text-ochre transition-colors">Get the book</a>
-      <a href="#faq"       class="hover:text-ochre transition-colors">FAQ</a>
-    </nav>
-    <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta !py-2.5 !px-4 !text-sm">
-      Get the book — $29
-    </a>
+      <span class="font-serif text-[1rem] tracking-tight text-ink">Beyond the Screen</span>
+    </span>
+    <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta !py-2 !px-3.5 !text-sm">Get it — $19</a>
   </div>
 </header>
 
-<main id="top" class="pt-16">
+<main id="top" class="pt-14">
 
-  <!-- ════════════ 1. HERO ════════════ -->
+  <!-- ════════════ HERO (WARM): echo the story's feeling → straight to offer ════════════ -->
   <section class="relative">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 pt-12 sm:pt-20 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+    <div class="max-w-3xl mx-auto px-5 pt-7 sm:pt-12 pb-10">
 
-      <div class="lg:col-span-7 order-2 lg:order-1">
-        <p class="caps text-sage mb-6 flex items-center gap-3">
-          <span class="inline-block w-6 h-px bg-sage"></span>
-          For parents of 3–10s tired of being the entertainment department
-        </p>
+      <!-- CONDITIONS · qualification, warmed -->
+      <p class="caps text-sage mb-4 flex items-center gap-2">
+        <span class="inline-block w-5 h-px bg-sage"></span>
+        For the 4:47 pm that beats you
+      </p>
 
-        <h1 class="display text-[2.4rem] sm:text-[3.4rem] lg:text-[4.1rem] balance text-ink">
-          It's 4:47&nbsp;pm. They're bored.<br/>
-          <span class="italic text-ochre" style="font-variation-settings: 'SOFT' 100;">You're done.</span>
-        </h1>
+      <!-- WARM ECHO — picks up the story's emotional thread without assuming they read every word -->
+      <h1 class="display text-[2.3rem] sm:text-[3.2rem] balance text-ink leading-[1.03]">
+        This is The 4:47 Sheet.<br/>
+        <span class="italic text-ochre" style="font-variation-settings:'SOFT' 100;">It goes on the fridge.</span>
+      </h1>
 
-        <p class="mt-7 text-lg sm:text-xl text-ink2 max-w-xl pretty leading-relaxed">
-          One hundred and one screen-free activities, organised by <em class="font-serif italic">The 15-Second Boredom Matrix</em> — a two-question system that picks the right activity by mess level and prep time. No scrolling, no Pinterest, no glue gun.
-        </p>
+      <p class="mt-5 text-lg text-ink2 pretty leading-relaxed">
+        Maybe for you it wasn't a toy toolbox. Maybe it was another timer, another bargain, another "just ten more minutes." For one mum, it was the afternoon her three-year-old fetched his toy toolbox to "fix" the telly she'd told him was broken — a googly-eyed hammer laid out on the carpet, the most serious little face in the world. Whatever your version is, you know the moment underneath it: one hand on a wooden spoon, dinner half-made, a small voice says <em class="italic">"I'm bored"</em> — and your mind goes blank. Not because you don't know a hundred things they could do. Because at 4:47, on an empty tank, you can't reach a single one of them. So the screen wins. Again.
+      </p>
 
-        <div class="mt-10 flex flex-wrap items-center gap-5">
-          <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta">
-            Get the book — $29
-            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-              <path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <p class="text-sm text-ink2/80">
-            Instant download · PDF · 30-day money-back guarantee
-          </p>
-        </div>
+      <p class="mt-4 text-lg text-ink2 pretty leading-relaxed">
+        <strong class="text-ink">Beyond the Screen</strong> is the little book it lives in. 101 screen-free activities, and The 4:47 Sheet sorts them on one page by the only two questions you can answer at the stove — <em class="font-serif italic">how much mess can you cope with, and how long until dinner?</em> It filters the hundred ideas down to the one that fits, so you glance, pick a box, and you're done in 15 seconds. The deciding was already done — over two years, by a former primary-school teacher who cut every activity that didn't reliably hold a kid. What's left is the 101 that did.
+      </p>
 
-        <!-- trust strip -->
-        <div class="mt-14 pt-8 border-t border-rule">
-          <p class="caps text-ink2/60 mb-4">As featured in</p>
-          <div class="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
-            <span class="font-serif text-xl text-ink tracking-tight">The New York Times</span>
-            <span class="font-serif italic text-xl text-ink">Cup of Jo</span>
-            <span class="font-sans uppercase tracking-[0.28em] text-sm text-ink font-semibold">The Cut</span>
-            <span class="font-serif text-xl text-ink">Romper</span>
-            <span class="font-sans lowercase tracking-tight text-lg text-ink font-medium">motherly</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cover -->
-      <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end relative">
-        <!-- soft ochre paper backdrop -->
-        <div aria-hidden="true" class="absolute -inset-6 sm:-inset-10 bg-paper rounded-[28px] -z-10 rotate-[3deg]"></div>
-
-        <div class="cover-tilt rounded-md overflow-hidden bg-paper w-[260px] sm:w-[320px] lg:w-[360px] aspect-[2/3]">
+      <!-- Cover + OFFER + risk reversal -->
+      <div class="mt-8 flex flex-col sm:flex-row gap-6 sm:items-center">
+        <div class="cover-tilt rounded-md overflow-hidden bg-paper w-[150px] shrink-0 aspect-[2/3] mx-auto sm:mx-0">
           <img src="cover.webp" alt="Beyond the Screen — 101 Tech-Free Boredom Busters by Polly Hayes" class="w-full h-full object-cover" />
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 2. THE PROBLEM ════════════ -->
-  <section class="border-t border-rule">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <p class="caps text-sage mb-8">The 4:47 pm problem</p>
-
-      <div class="font-serif text-[1.45rem] sm:text-[1.7rem] leading-[1.45] text-ink space-y-6 pretty" style="font-variation-settings: 'SOFT' 60;">
-        <p>
-          <span class="italic">"I'm bored."</span> Two words. Said at the worst
-          possible time — usually while you're holding a knife, an email, or
-          a baby. Sometimes all three.
-        </p>
-        <p>
-          You'd love to hand them something that isn't an iPad. You really would.
-          But your brain is gone, the craft cupboard is a crime scene, and the
-          last thing you searched was a Pinterest board that needed three
-          trips to Target and a glue gun.
-        </p>
-        <p>
-          So you hand over the screen. Again. And the worst part isn't the screen time — it's the small voice that says <span class="italic">this isn't who I meant to be</span>.
-        </p>
-      </div>
-
-      <!-- Insight pivot — the reframe that makes the matrix inevitable -->
-      <div class="mt-16 pt-12 border-t border-rule">
-        <p class="caps text-sage mb-6">Here's the strange part</p>
-
-        <h3 class="display text-3xl sm:text-4xl text-ink balance mb-8 leading-[1.15]">
-          Two parents, same Tuesday, same 4:47&nbsp;pm fog.<br/>
-          <span class="italic text-ochre">Why does only one of them have an answer?</span>
-        </h3>
-
-        <div class="text-lg text-ink2 leading-relaxed space-y-5 pretty">
-          <p>
-            One has hundreds of saved ideas — Pinterest boards, Instagram saves, screenshots three pages deep. She opens her phone, scrolls for four minutes, hands over the iPad.
-          </p>
-          <p>
-            The other has one battered list on the fridge. She glances at it, walks to the cupboard, and twelve minutes later her kid is sorting buttons on the kitchen floor.
-          </p>
-          <p>
-            Same age. Same exhaustion. Same Tuesday. The difference isn't willpower. It isn't discipline. It isn't even more ideas — the first parent has hundreds more. <em class="font-serif italic">So what is it?</em>
-          </p>
-          <p class="text-ink pt-2">
-            It's not a willpower problem. <strong>It's a filtration problem.</strong>
-          </p>
-          <p>
-            A tired brain plus hundreds of saved ideas is not hundreds of options. It's hundreds of micro-decisions stacked on a brain that's already empty. <em class="font-serif italic">Do I have the supplies? Is it too messy? Will it last long enough? Can I cope with the cleanup?</em> Each one costs energy you don't have.
-          </p>
-          <p>
-            So you choose the option with no decisions in it. The screen wins by default — not because you wanted it to, but because depleted brains conserve energy.
-          </p>
-        </div>
-
-        <!-- Testable proof breakout — make the reader generate their own evidence -->
-        <div class="my-10 p-6 sm:p-8 border-l-2 border-ochre bg-cream rounded-r-md">
-          <p class="caps text-ochre mb-4">Try this — right now</p>
-          <p class="font-serif text-xl sm:text-2xl text-ink leading-snug italic pretty mb-4">
-            Stop reading for ten seconds. Think of one screen-free activity your kid would actually do tonight. Got one? Now think of nine more.
-          </p>
-          <p class="text-ink2 leading-relaxed pretty">
-            Most parents are empty by number three — not because we don't <em class="italic">know</em> any. We know hundreds. We just can't access them when the brain is tired. That's filtration failing, in real time, in your own head. <em class="font-serif italic">The 15-Second Boredom Matrix</em> is what filtration looks like when it's done in advance, by someone with energy.
-          </p>
-        </div>
-
-        <div class="text-lg text-ink2 leading-relaxed pretty">
-          <p>
-            You don't need more ideas. You need <em class="font-serif italic">fewer choices, pre-sorted by the two questions you'd ask anyway.</em>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 2.5 UMP QUIZ ════════════ -->
-  <section class="border-t border-rule bg-paper/40">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <p class="caps text-sage mb-4">A quick honest check</p>
-      <h2 class="display text-4xl sm:text-5xl text-ink balance mb-8">
-        Are you in the loop?
-      </h2>
-
-      <p class="text-lg text-ink2 leading-relaxed mb-12 pretty max-w-2xl">
-        Read these honestly. Count the ones that hit.
-      </p>
-
-      <ol class="space-y-7 font-serif text-xl sm:text-[1.35rem] text-ink leading-snug pretty">
-        <li class="flex gap-5">
-          <span class="caps text-ochre shrink-0 mt-2 w-8">01</span>
-          <span>You've opened your phone for ideas at the witching hour, scrolled for four minutes, and closed it without doing a thing.</span>
-        </li>
-        <li class="flex gap-5">
-          <span class="caps text-ochre shrink-0 mt-2 w-8">02</span>
-          <span>There's a craft cupboard in your house full of supplies for activities that never happened.</span>
-        </li>
-        <li class="flex gap-5">
-          <span class="caps text-ochre shrink-0 mt-2 w-8">03</span>
-          <span>You've said <em class="italic">"in a minute"</em> to a bored kid and forgotten you said it within the hour.</span>
-        </li>
-        <li class="flex gap-5">
-          <span class="caps text-ochre shrink-0 mt-2 w-8">04</span>
-          <span>The phrase <em class="italic">"I'm bored"</em> produces a small physical reaction in your chest now. A little tightening.</span>
-        </li>
-        <li class="flex gap-5">
-          <span class="caps text-ochre shrink-0 mt-2 w-8">05</span>
-          <span>You've used the screen as a tool you respect, and a tool you're quietly ashamed of, in the same afternoon.</span>
-        </li>
-      </ol>
-
-      <div class="mt-14 pt-8 border-t border-rule">
-        <p class="text-lg text-ink2 leading-relaxed pretty">
-          <strong class="text-ink">Two yeses</strong> and the book will pay for itself by Wednesday. <strong class="text-ink">Three or more</strong> and it's probably the most useful $29 you'll spend this year. None of the above? Honestly — you probably don't need this. Save the money.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 3. THE MECHANISM ════════════ -->
-  <section id="mechanism" class="bg-paper/60 border-y border-rule">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-
-      <div class="lg:col-span-5">
-        <p class="caps text-sage mb-6">The system</p>
-        <h2 class="display text-4xl sm:text-5xl text-ink balance">
-          The 15-Second Boredom Matrix.
-        </h2>
-        <p class="mt-6 text-lg text-ink2 leading-relaxed pretty">
-          A simple two-question system: <em class="font-serif italic">how much mess can you cope with?</em>
-          and <em class="font-serif italic">how long until dinner?</em>
-          Two questions a depleted brain can actually answer.
-        </p>
-        <p class="mt-4 text-lg text-ink2 leading-relaxed pretty">
-          Nine cells. One activity that actually fits. The filtration done for you — by someone who isn't out of energy.
-        </p>
-
-        <ul class="mt-8 space-y-3 text-ink2">
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ochre shrink-0"></span><span><strong class="text-ink">Mess level</strong> — Clean, Light, or Big. No surprises.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ochre shrink-0"></span><span><strong class="text-ink">Prep time</strong> — 0–2 min, 5–10 min, or 15+ min. Honest numbers.</span></li>
-          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-ochre shrink-0"></span><span><strong class="text-ink">A matrix on page one</strong>. Find your cell. Pick the activity. Done.</span></li>
-        </ul>
-      </div>
-
-      <!-- Matrix visual -->
-      <div class="lg:col-span-7">
-        <div class="bg-cream rounded-2xl border border-rule p-5 sm:p-7">
-          <div class="flex items-end justify-between mb-4">
-            <p class="caps text-ink2/70">The 15-Second Boredom Matrix</p>
-            <p class="caps text-ochre hidden sm:block">9 cells · 101 activities</p>
-          </div>
-
-          <!-- header row: prep -->
-          <div class="grid grid-cols-[110px_repeat(3,1fr)] gap-2 sm:gap-3">
-            <div></div>
-            <div class="caps text-ink2/70 text-center pb-2">0–2 min</div>
-            <div class="caps text-ink2/70 text-center pb-2">5–10 min</div>
-            <div class="caps text-ink2/70 text-center pb-2">15+ min</div>
-
-            <!-- Row: Clean -->
-            <div class="caps text-sage self-center">Clean</div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">14</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Sock-Matching Race</p>
-            </div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">11</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Story Dice</p>
-            </div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">9</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Indoor Camping</p>
-            </div>
-
-            <!-- Row: Light -->
-            <div class="caps text-ochre self-center">Light</div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">12</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Sticky-Tape Maze</p>
-            </div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4 ring-1 ring-ochre/40">
-              <p class="font-serif text-xl sm:text-2xl text-ochre">15</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Capsicum Stamps</p>
-            </div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">10</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Salt-Dough Coins</p>
-            </div>
-
-            <!-- Row: Big -->
-            <div class="caps text-[#8A3D2B] self-center">Big</div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">8</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Bath Paint</p>
-            </div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">12</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Tape Resist Painting</p>
-            </div>
-            <div class="matrix-cell rounded-xl p-3 sm:p-4">
-              <p class="font-serif text-xl sm:text-2xl text-ink">10</p>
-              <p class="text-xs text-ink2/70 mt-1">e.g. Backyard Mud Kitchen</p>
-            </div>
-          </div>
-
-          <p class="mt-5 text-xs text-ink2/60 italic">Hover a cell on desktop. The book has the same matrix — printable, fridge-ready.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 4. WHAT'S INSIDE ════════════ -->
-  <section id="inside">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <div class="flex items-end justify-between flex-wrap gap-4 mb-12">
-        <div>
-          <p class="caps text-sage mb-4">What's inside</p>
-          <h2 class="display text-4xl sm:text-5xl text-ink balance">Eight chapters. <span class="italic text-ochre">One hundred and one</span> ways out of the witching hour.</h2>
-        </div>
-        <p class="text-ink2/70 text-sm font-serif italic max-w-xs">Each chapter opens with a one-line promise and ends with the messiest activity, so you can stop where your nerves stop.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-rule rounded-2xl overflow-hidden border border-rule">
-        <!-- Chapter card template -->
-
-        <!-- 1 Quiet Wins -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <circle cx="17" cy="17" r="14" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-            <path d="M11 17 Q 17 11, 23 17" fill="none" stroke="#C8881F" stroke-width="1.4"/>
-          </svg>
-          <p class="caps text-sage mb-2">01 · 10 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Quiet Wins</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">For when the baby just went down and the dog is also asleep.</p>
-        </article>
-
-        <!-- 2 Get Them Moving -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <path d="M5 25 L13 17 L19 22 L29 9" fill="none" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="29" cy="9" r="2" fill="#C8881F"/>
-          </svg>
-          <p class="caps text-sage mb-2">02 · 15 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Get Them Moving</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">Burns serious energy in fifteen minutes. Bedtime made easier.</p>
-        </article>
-
-        <!-- 3 Make Something -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <rect x="6" y="10" width="22" height="16" rx="2" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-            <path d="M6 14 L28 14" stroke="#C8881F" stroke-width="1.2"/>
-            <path d="M12 22 L22 22" stroke="#1A1A1A" stroke-width="1.2"/>
-          </svg>
-          <p class="caps text-sage mb-2">03 · 20 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Make Something</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">Real making, household stuff only. No glue gun required.</p>
-        </article>
-
-        <!-- 4 Kitchen Quests -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <path d="M9 8 L9 26 Q 9 28, 11 28 L23 28 Q 25 28, 25 26 L25 8" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-            <path d="M13 8 L13 4 M21 8 L21 4" stroke="#C8881F" stroke-width="1.2"/>
-          </svg>
-          <p class="caps text-sage mb-2">04 · 13 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Kitchen Quests</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">Tiny chefs. Real food. Mostly edible outcomes.</p>
-        </article>
-
-        <!-- 5 Pretend Worlds -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <path d="M6 26 L17 8 L28 26 Z" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-            <circle cx="17" cy="20" r="2" fill="#C8881F"/>
-          </svg>
-          <p class="caps text-sage mb-2">05 · 14 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Pretend Worlds</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">A blanket fort, a shop, a spaceship — all already in the lounge.</p>
-        </article>
-
-        <!-- 6 Outside Adventures -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <circle cx="17" cy="14" r="6" fill="none" stroke="#C8881F" stroke-width="1.2"/>
-            <path d="M17 20 L17 28 M11 24 L17 22 L23 24" stroke="#1A1A1A" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-          </svg>
-          <p class="caps text-sage mb-2">06 · 16 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Outside Adventures</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">The backyard, the footpath, the park — re-enchanted.</p>
-        </article>
-
-        <!-- 7 Brain Benders -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <path d="M10 8 L24 8 L24 14 L18 14 L18 22 L24 22 L24 28 L10 28 L10 22 L16 22 L16 14 L10 14 Z" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-            <circle cx="17" cy="18" r="1.6" fill="#C8881F"/>
-          </svg>
-          <p class="caps text-sage mb-2">07 · 9 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Brain Benders</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">Riddles, puzzles, lateral games. Quietly hard.</p>
-        </article>
-
-        <!-- 8 Connection Time -->
-        <article class="bg-cream p-7 hover:bg-paper/60 transition-colors">
-          <svg width="34" height="34" viewBox="0 0 34 34" class="mb-5" aria-hidden="true">
-            <circle cx="12" cy="14" r="4" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-            <circle cx="22" cy="14" r="4" fill="none" stroke="#C8881F" stroke-width="1.2"/>
-            <path d="M6 28 Q 12 22, 17 24 Q 22 22, 28 28" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-          </svg>
-          <p class="caps text-sage mb-2">08 · 4 activities</p>
-          <h3 class="font-serif text-2xl text-ink mb-2">Connection Time</h3>
-          <p class="text-sm text-ink2/80 leading-relaxed">The four that quietly become memories. Don't skip these.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 5. PREVIEW ════════════ -->
-  <section class="border-t border-rule bg-paper/40">
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <div class="max-w-2xl mb-12">
-        <p class="caps text-sage mb-4">A look inside</p>
-        <h2 class="display text-4xl sm:text-5xl text-ink balance">Here's what an activity looks like.</h2>
-        <p class="mt-5 text-ink2 text-lg pretty">Each one fits on a single page. The tags up top tell you, in one glance, whether you can cope with it right now.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-
-        <!-- Card 1 -->
-        <article class="torn rounded-md p-6 sm:p-7 relative" style="transform: rotate(-0.6deg);">
-          <div class="flex items-center justify-between mb-4">
-            <span class="caps text-ink2/60">No. 014</span>
-            <span class="caps text-sage">Get Them Moving</span>
-          </div>
-          <h3 class="display text-2xl sm:text-[1.7rem] text-ink mb-3">Sock-Matching Race</h3>
-          <p class="text-ink2 leading-relaxed text-[0.95rem] mb-5 pretty">
-            Tip the laundry basket onto the rug. Set a two-minute timer. Whoever
-            pairs the most socks wins (you also win — the laundry's done).
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="chip chip-clean">● Clean</span>
-            <span class="chip chip-time">⏱ 0–2 min</span>
-            <span class="chip chip-time">Ages 4+</span>
-          </div>
-          <p class="text-xs italic text-ink2/60 border-t border-rule pt-3">"Burns five minutes. Folds your laundry. Trust me on this one."</p>
-        </article>
-
-        <!-- Card 2 -->
-        <article class="torn rounded-md p-6 sm:p-7 relative md:translate-y-6" style="transform: rotate(0.4deg);">
-          <div class="flex items-center justify-between mb-4">
-            <span class="caps text-ink2/60">No. 052</span>
-            <span class="caps text-sage">Make Something</span>
-          </div>
-          <h3 class="display text-2xl sm:text-[1.7rem] text-ink mb-3">Tape Resist Painting</h3>
-          <p class="text-ink2 leading-relaxed text-[0.95rem] mb-5 pretty">
-            Masking tape onto paper in any pattern. Paint over the lot. Peel the tape
-            off when dry. They will gasp. You will frame it. Trust me.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="chip chip-big">● Big mess</span>
-            <span class="chip chip-time">⏱ 5–10 min</span>
-            <span class="chip chip-time">Ages 3+</span>
-          </div>
-          <p class="text-xs italic text-ink2/60 border-t border-rule pt-3">"The op-shop frame makes it. Don't skip the frame."</p>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="torn rounded-md p-6 sm:p-7 relative" style="transform: rotate(-0.3deg);">
-          <div class="flex items-center justify-between mb-4">
-            <span class="caps text-ink2/60">No. 087</span>
-            <span class="caps text-sage">Pretend Worlds</span>
-          </div>
-          <h3 class="display text-2xl sm:text-[1.7rem] text-ink mb-3">Indoor Camping</h3>
-          <p class="text-ink2 leading-relaxed text-[0.95rem] mb-5 pretty">
-            Sheet over the dining table. Torch. Biscuits in a tin called "rations."
-            One bedtime story read in a whisper. They will remember this one.
-          </p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="chip chip-light">● Light</span>
-            <span class="chip chip-time">⏱ 15+ min</span>
-            <span class="chip chip-time">Ages 3+</span>
-          </div>
-          <p class="text-xs italic text-ink2/60 border-t border-rule pt-3">"Lasts until they fall asleep under the table. Often does."</p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 5.5 MYTHS & ADVERSARY ════════════ -->
-  <section class="border-t border-rule">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <h2 class="display text-4xl sm:text-5xl text-ink balance mb-8">
-        What every other activity book <span class="italic text-ochre">has wrong.</span>
-      </h2>
-      <p class="text-lg text-ink2 leading-relaxed mb-14 pretty max-w-2xl">
-        Activity books are written by people who have time to write activity books. That's a small but real conflict of interest. Three things they all get wrong.
-      </p>
-
-      <div class="space-y-14">
-
-        <!-- Myth 01 -->
-        <div class="grid sm:grid-cols-[100px_1fr] gap-4 sm:gap-8">
-          <p class="caps text-ochre pt-1">Myth 01</p>
-          <div>
-            <h3 class="font-serif text-2xl sm:text-[1.7rem] text-ink mb-3 leading-snug">You need more ideas.</h3>
-            <p class="text-ink2 leading-relaxed pretty">
-              The industry's answer is always <em class="italic">another</em> five hundred. Pinterest's algorithm is the same: keep scrolling, keep saving, treat the problem as a supply shortage. But a depleted brain doesn't need more supply. It needs a filter. More ideas without a filter makes the witching hour <em class="italic">worse</em>, not better.
-            </p>
-          </div>
-        </div>
-
-        <!-- Myth 02 -->
-        <div class="grid sm:grid-cols-[100px_1fr] gap-4 sm:gap-8">
-          <p class="caps text-ochre pt-1">Myth 02</p>
-          <div>
-            <h3 class="font-serif text-2xl sm:text-[1.7rem] text-ink mb-3 leading-snug">Screen-free time has to be enriching.</h3>
-            <p class="text-ink2 leading-relaxed pretty">
-              Most activity books sell every page as a learning opportunity — fine motor skills, creative expression, emotional regulation. Most Tuesday evenings don't need to be enriching. They need to be peaceful. A child playing with masking tape on the floor is not falling behind.
-            </p>
-          </div>
-        </div>
-
-        <!-- Myth 03 -->
-        <div class="grid sm:grid-cols-[100px_1fr] gap-4 sm:gap-8">
-          <p class="caps text-ochre pt-1">Myth 03</p>
-          <div>
-            <h3 class="font-serif text-2xl sm:text-[1.7rem] text-ink mb-3 leading-snug">Good parents are creative at 4:47&nbsp;pm.</h3>
-            <p class="text-ink2 leading-relaxed pretty">
-              The unspoken promise of every "fun mom" Instagram account is that the right person, in the right state of mind, can pull a charming activity out of thin air at the end of a long day. Nobody can. Not at 4:47&nbsp;pm. Not in week eleven of winter. Not after a long day at work. Including the people who write the books. The system is what carries you when you can't.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 5.7 AWE CONSTRAINTS ════════════ -->
-  <section class="bg-paper/60 border-t border-rule">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <p class="caps text-sage mb-4">Before you buy</p>
-      <h2 class="display text-4xl sm:text-5xl text-ink balance mb-14">
-        Three things this <span class="italic text-ochre">isn't.</span>
-      </h2>
-
-      <div class="space-y-10">
-
-        <div class="border-l-2 border-ochre/50 pl-6">
-          <h3 class="font-serif text-xl sm:text-2xl text-ink mb-3 leading-snug italic">This isn't fifteen minutes of prep.</h3>
-          <p class="text-ink2 leading-relaxed pretty">
-            Every activity is timed honestly, at the top of the page. The longest setups sit in the 15+ column of the matrix — and "fifteen-plus" includes a couple of dough recipes that mostly bake themselves. The rest fit between two checks of the dinner timer.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-ochre/50 pl-6">
-          <h3 class="font-serif text-xl sm:text-2xl text-ink mb-3 leading-snug italic">This isn't a shopping list.</h3>
-          <p class="text-ink2 leading-relaxed pretty">
-            The supply list for the whole book is six things: paper, tape, socks, masking tape, a torch, the pantry. If an activity needs anything else, it's flagged at the top of that page and a substitution is given. You will never be asked to drive somewhere.
-          </p>
-        </div>
-
-        <div class="border-l-2 border-ochre/50 pl-6">
-          <h3 class="font-serif text-xl sm:text-2xl text-ink mb-3 leading-snug italic">This isn't a performance.</h3>
-          <p class="text-ink2 leading-relaxed pretty">
-            You don't have to be on the floor. You don't have to narrate enthusiastically. You don't have to be creative, present, or even particularly cheerful. Some activities you start and walk away from. Some run themselves while you finish dinner. The point isn't to be a better parent <em class="italic">in the moment</em> — it's to have a system that works when you can't.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 6. THE OFFER ════════════ -->
-  <section id="offer">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <h2 class="display text-4xl sm:text-5xl text-ink balance">Become the parent who <span class="italic text-ochre">has answers</span> at 4:47&nbsp;pm.</h2>
-        <p class="mt-5 text-ink2 text-lg pretty">Not because you got more disciplined or more creative. Because you stopped relying on either. One PDF, two bonuses, free updates forever.</p>
-      </div>
-
-      <div class="bg-cream border border-rule rounded-2xl p-7 sm:p-10 relative overflow-hidden">
-
-        <!-- 101 motif -->
-        <p aria-hidden="true" class="one-oh-one absolute -top-6 -right-2 sm:-right-6 text-paper text-[10rem] sm:text-[14rem] select-none pointer-events-none">101</p>
-
-        <ul class="relative space-y-5 divide-y divide-rule">
-          <li class="flex items-start gap-5 pt-0">
-            <span class="caps text-ochre mt-2 shrink-0 w-12">01</span>
-            <div class="flex-1">
-              <h3 class="font-serif text-xl text-ink">The book — <span class="italic">Beyond the Screen</span></h3>
-              <p class="text-sm text-ink2/80 mt-1">101 activities. PDF. ~25 pages. Designed to read on a phone or print on A4.</p>
-            </div>
-            <span class="font-serif text-xl text-ink2 shrink-0">$29</span>
-          </li>
-
-          <li class="flex items-start gap-5 pt-5">
-            <span class="caps text-ochre mt-2 shrink-0 w-12">02</span>
-            <div class="flex-1">
-              <h3 class="font-serif text-xl text-ink">Bonus · The Matrix Cheat Sheet</h3>
-              <p class="text-sm text-ink2/80 mt-1">A one-page printable. Goes on the fridge. Solves dinnertime.</p>
-            </div>
-            <span class="font-serif italic text-base text-sage shrink-0">included</span>
-          </li>
-
-          <li class="flex items-start gap-5 pt-5">
-            <span class="caps text-ochre mt-2 shrink-0 w-12">03</span>
-            <div class="flex-1">
-              <h3 class="font-serif text-xl text-ink">Bonus · Rainy Day Quick-Start</h3>
-              <p class="text-sm text-ink2/80 mt-1">A curated 10-activity guide for the days the weather decides for you.</p>
-            </div>
-            <span class="font-serif italic text-base text-sage shrink-0">included</span>
-          </li>
-
-          <li class="flex items-start gap-5 pt-5">
-            <span class="caps text-ochre mt-2 shrink-0 w-12">04</span>
-            <div class="flex-1">
-              <h3 class="font-serif text-xl text-ink">Free updates, forever</h3>
-              <p class="text-sm text-ink2/80 mt-1">When new activities are added — and they will be — your copy updates too.</p>
-            </div>
-            <span class="font-serif italic text-base text-sage shrink-0">included</span>
-          </li>
-        </ul>
-
-        <div class="relative mt-10 pt-6 border-t border-rule flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-          <div>
-            <p class="caps text-ink2/60">Today's price</p>
-            <p class="font-serif text-3xl sm:text-4xl text-ink mt-1">
-              <span class="text-ochre">$29</span>
-              <span class="text-base text-ink2/60 font-sans ml-1">— rising to $39 with the next update</span>
-            </p>
-            <p class="text-sm text-ink2/70 mt-2">Instant PDF download. Buy now, every future update is yours free.</p>
-            <p class="text-sm text-ink2/70 mt-3 italic max-w-md">Try one activity. If it doesn't work on the first go, email me — I'll refund you and tell you which one would have. I keep records.</p>
-          </div>
-          <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta self-start sm:self-auto whitespace-nowrap">
-            Get the book — $29
-            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-              <path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <div class="flex-1">
+          <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta w-full sm:w-auto justify-center !py-4 !text-base">
+            Get the book — $19 <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
+          <p class="mt-3 text-sm text-ink2/80">Instant PDF · The 4:47 Sheet is on page one · 30-day money-back, no questions asked.</p>
+          <p class="mt-4 text-sm text-ink2/70 leading-relaxed border-l-2 border-ochre/40 pl-3">
+            Every activity tells you the mess and the prep time up front — so you're never gambling on something that turns out to need a glue gun and forty minutes you don't have.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ════════════ 7. ABOUT THE AUTHOR ════════════ -->
-  <section class="bg-paper/60 border-y border-rule">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 py-20 sm:py-24 grid md:grid-cols-[180px_1fr] gap-10 items-start">
+  <!-- ════════════ CURIOSITY made tangible — the matrix, pulled UP for warm/ready buyers ════════════ -->
+  <section class="border-t border-rule bg-paper/40">
+    <div class="max-w-3xl mx-auto px-5 py-12 sm:py-16">
+      <p class="caps text-sage mb-3">Here's The 4:47 Sheet itself</p>
+      <h2 class="display text-3xl sm:text-4xl text-ink balance mb-6">Two questions. Nine boxes. One activity that fits.</h2>
 
-      <!-- Author photo -->
-      <div class="flex md:block justify-center">
-        <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-cream border border-rule overflow-hidden relative">
-          <img src="Author_Photo.webp" alt="Polly Hayes" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="bg-cream rounded-2xl border border-rule p-4 sm:p-6">
+        <div class="grid grid-cols-[64px_repeat(3,1fr)] gap-1.5 sm:gap-2.5">
+          <div></div>
+          <div class="caps text-ink2/70 text-center pb-1 text-[0.6rem] sm:text-xs">0–2 min</div>
+          <div class="caps text-ink2/70 text-center pb-1 text-[0.6rem] sm:text-xs">5–10 min</div>
+          <div class="caps text-ink2/70 text-center pb-1 text-[0.6rem] sm:text-xs">15+ min</div>
+
+          <div class="caps text-sage self-center text-[0.6rem] sm:text-xs">Clean</div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">14</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Sock-Matching Race</p></div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">11</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Story Dice</p></div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">9</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Indoor Camping</p></div>
+
+          <div class="caps text-ochre self-center text-[0.6rem] sm:text-xs">Light</div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">12</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Sticky-Tape Maze</p></div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3 ring-1 ring-ochre/40"><p class="font-serif text-lg sm:text-2xl text-ochre">15</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Capsicum Stamps</p></div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">10</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Salt-Dough Coins</p></div>
+
+          <div class="caps text-[#8A3D2B] self-center text-[0.6rem] sm:text-xs">Big</div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">8</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Bath Paint</p></div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">12</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Tape Resist Painting</p></div>
+          <div class="matrix-cell rounded-lg p-2 sm:p-3"><p class="font-serif text-lg sm:text-2xl text-ink">10</p><p class="text-[0.65rem] sm:text-xs text-ink2/70 mt-0.5 leading-tight">Backyard Mud Kitchen</p></div>
+        </div>
+        <p class="mt-4 text-xs text-ink2/60 italic">This is The 4:47 Sheet — printable, fridge-ready — every box filled from two years of testing across real witching hours, not a brainstorm. Plus the Rainy-Day Quick-Start for the days the weather decides for you.</p>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta !py-4 !text-base">Get the book — $19 <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ THE DIAMOND — the insight, now BELOW the offer for scrollers/still-deciding ════════════ -->
+  <section class="border-t border-rule">
+    <div class="max-w-3xl mx-auto px-5 py-12 sm:py-16">
+      <p class="caps text-sage mb-3">Still deciding? Here's what's actually going on</p>
+      <h2 class="display text-3xl sm:text-4xl text-ink balance mb-6 leading-[1.12]">
+        It was never a willpower problem.<br/>
+        <span class="italic text-ochre">It's a filtration problem.</span>
+      </h2>
+
+      <!-- TESTABLE PROOF folded in (reader generates it) -->
+      <div class="my-7 p-6 sm:p-7 border-l-2 border-ochre bg-cream rounded-r-md">
+        <p class="caps text-ochre mb-3">Try this — right now</p>
+        <p class="font-serif text-xl sm:text-2xl text-ink leading-snug italic pretty mb-3">
+          Name one screen-free thing your kid would actually do tonight. Got it? Now name nine more.
+        </p>
+        <p class="text-ink2 leading-relaxed pretty">
+          Most parents dry up by number three — not because you don't <em class="italic">know</em> any. You know hundreds. You just couldn't reach them. You just proved it to yourself.
+        </p>
+      </div>
+
+      <!-- SURPRISING CAUSE (honest, real mechanism — decision fatigue) -->
+      <div class="text-lg text-ink2 leading-relaxed space-y-5 pretty">
+        <p>
+          A tired brain plus a hundred saved ideas isn't a hundred options. It's a hundred tiny decisions stacked on a brain that's already empty. <em class="font-serif italic">Do I have the stuff? Is it too messy? Will it last? Can I face the cleanup?</em> Every one costs energy you don't have at 4:47.
+        </p>
+        <p>
+          So your brain does the rational thing — it picks the option with zero decisions in it. <strong class="text-ink">The screen.</strong> Not because you're lazy, or you've stopped trying. Because a depleted brain protects itself by avoiding choices. That's not a character flaw. That's just how the wiring works when you're running on empty.
+        </p>
+        <p>
+          Here's why nobody tells you this. The whole thing is disguised as a character flaw — it looks exactly like laziness, from the outside and from the inside. So you blame your willpower, and every book and app sells you the cure for a willpower problem: more ideas, more discipline, more supply. The real problem hides in plain sight because it's wearing the costume of the thing you already believe about yourself. You have to have stood at that stove, too tired to reach a single idea you already knew, to see it for what it actually is.
+        </p>
+      </div>
+
+      <!-- MYTH -->
+      <div class="my-9 p-6 sm:p-7 border-l-2 border-ochre bg-cream rounded-r-md">
+        <p class="caps text-ochre mb-3">The myth that keeps you stuck</p>
+        <p class="font-serif text-xl sm:text-2xl text-ink leading-snug italic pretty mb-3">
+          "I just need more ideas."
+        </p>
+        <p class="text-ink2 leading-relaxed pretty">
+          It's the opposite. More ideas is more decisions — it makes 4:47 <em class="italic">worse</em>. Pinterest, Instagram, every other activity book: they all sell you more supply, when the thing breaking down is the <strong class="text-ink">filter</strong>. You don't need a bigger pile. You need someone to have done the sorting already, while they still had the energy to think straight.
+        </p>
+      </div>
+
+      <p class="text-lg text-ink2 leading-relaxed pretty">
+        That's the entire job of The 4:47 Sheet. The filtering is already done — so the decision your empty brain can't make at 4:47 is one you made in 15 seconds, weeks ago, by glancing at the fridge.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════ CONSTRAINTS — the Big Three (time/money/effort) dissolved via AWE ════════════ -->
+  <section class="border-t border-rule">
+    <div class="max-w-3xl mx-auto px-5 py-12 sm:py-16">
+      <h2 class="display text-3xl sm:text-4xl text-ink balance mb-8">You're already thinking of three reasons not to.</h2>
+      <div class="space-y-7">
+        <!-- EFFORT -->
+        <div class="border-l-2 border-ochre/50 pl-5">
+          <p class="font-serif text-xl text-ink mb-1 italic">"I don't have the energy to set anything up."</p>
+          <p class="text-ink2 leading-relaxed pretty">That's the point. Every activity is timed honestly at the top — most run 0–2 minutes of setup, and some run themselves while you finish dinner. You don't have to be on the floor, narrating, being the fun one. The system carries you when you can't.</p>
+        </div>
+        <!-- MONEY -->
+        <div class="border-l-2 border-ochre/50 pl-5">
+          <p class="font-serif text-xl text-ink mb-1 italic">"I'll have to buy a pile of craft supplies."</p>
+          <p class="text-ink2 leading-relaxed pretty">No. Somewhere along the way "screen-free" got tangled up with "craft supplies" — but the activity my kid asks for most is matching odd socks into pairs on the kitchen floor, and that costs nothing and makes no mess at all. The whole book runs on six things you already own — paper, tape, socks, a torch, the pantry. Anything that strays past those is flagged with a substitution tested to work, so you're never sent to a shop mid-meltdown. And the book itself is $19, less than the takeaway you'd order to survive the evening.</p>
+        </div>
+        <!-- TIME -->
+        <div class="border-l-2 border-ochre/50 pl-5">
+          <p class="font-serif text-xl text-ink mb-1 italic">"I don't have time to read another parenting book."</p>
+          <p class="text-ink2 leading-relaxed pretty">You don't read it. You glance at one page — The 4:47 Sheet — find your box, pick the activity, done. The reading time is 15 seconds, at the exact moment you need it.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div>
-        <p class="caps text-sage mb-4">About the author</p>
-        <h2 class="display text-3xl sm:text-4xl text-ink mb-6">Polly Hayes</h2>
+  <!-- ════════════ PROMISE (ladder) — mirror the pain chain, end on transformation ════════════ -->
+  <section class="border-t border-rule">
+    <div class="max-w-3xl mx-auto px-5 py-12 sm:py-16">
+      <p class="caps text-sage mb-3">Here's the other side of it</p>
+      <h2 class="display text-3xl sm:text-4xl text-ink balance mb-7">What 4:47&nbsp;pm looks like with this on the fridge.</h2>
+      <ul class="space-y-4 text-lg text-ink2 leading-relaxed pretty">
+        <li class="flex gap-3"><span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-ochre shrink-0"></span><span>"I'm bored" lands and you don't flinch — you glance at the fridge.</span></li>
+        <li class="flex gap-3"><span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-ochre shrink-0"></span><span>Twelve minutes later they're sorting buttons on the kitchen floor while you actually finish dinner — and that's not a hopeful guess, it's the floor the activity had to clear to make the book at all.</span></li>
+        <li class="flex gap-3"><span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-ochre shrink-0"></span><span>The screen becomes a choice you make, not a default you fall into.</span></li>
+        <li class="flex gap-3"><span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-ochre shrink-0"></span><span class="text-ink font-medium">And that small voice goes quiet — because you became the parent who has an answer at 4:47, without having to be more disciplined or more creative. You just stopped relying on either.</span></li>
+      </ul>
+    </div>
+  </section>
 
-        <p class="text-ink2 text-lg leading-relaxed pretty mb-5">This book was written on a kitchen floor in 2024, at 5:13&nbsp;pm on a Tuesday, after I handed my three-year-old the iPad for the second time that afternoon and cried — not from guilt, but from how <em class="font-serif italic">predictable</em> it had become. I'd been a primary-school teacher for a decade — and there I was, out of ideas at the worst possible hour. That night I started making the matrix.</p>
+  <!-- ════════════ PROOF (psychological + social, honest) + sample activity (demonstration) ════════════ -->
+  <section class="border-t border-rule bg-paper/40">
+    <div class="max-w-3xl mx-auto px-5 py-12 sm:py-16">
+      <p class="caps text-sage mb-4">What you actually get</p>
+      <h2 class="display text-3xl sm:text-4xl text-ink balance mb-7">Every activity fits on one honest page.</h2>
 
-        <p class="text-ink2 text-lg leading-relaxed pretty mb-5">Over two years I tested every activity with around <strong class="text-ink">1,400 families</strong> from my newsletter. Only the 101 that worked again and again made the cut. About 240 didn't.</p>
+      <article class="torn rounded-md p-6 sm:p-7 max-w-md" style="transform: rotate(-0.5deg);">
+        <div class="flex items-center justify-between mb-3">
+          <span class="caps text-ink2/60">No. 052</span>
+          <span class="caps text-sage">Make Something</span>
+        </div>
+        <h3 class="display text-2xl text-ink mb-3">Tape Resist Painting</h3>
+        <p class="text-ink2 leading-relaxed text-[0.95rem] mb-5 pretty">
+          Masking tape onto paper in any pattern. Paint over the lot. Peel the tape off when dry. They will gasp. You will frame it. Trust me.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="chip chip-big">● Big mess</span>
+          <span class="chip chip-time">⏱ 5–10 min</span>
+          <span class="chip chip-time">Ages 3+</span>
+        </div>
+        <p class="text-xs italic text-ink2/60 border-t border-rule pt-3">"The op-shop frame makes it. Don't skip the frame."</p>
+      </article>
 
-        <p class="text-ink2 text-lg leading-relaxed pretty"><em class="font-serif italic">Beyond the Screen</em> is the book I wish someone had handed me on that floor.</p>
+      <!-- PROOF · psychological (candid communication = the honest mess tag is itself the proof) -->
+      <p class="mt-6 text-ink2 text-lg leading-relaxed pretty">
+        See the tags? <strong class="text-ink">Big mess. 5–10 min.</strong> Every other activity book hides that — it sells you the gasp and lets you discover the mess after. This one tells you up front, so you pick what your nerves can handle tonight. That honesty <em class="italic">is</em> the system.
+      </p>
 
-        <blockquote class="mt-8 border-l-2 border-ochre pl-5 font-serif italic text-xl text-ink2 pretty">
-          "Trust the kid in front of you over the number on the page."
-        </blockquote>
+      <figure class="mt-8 bg-cream border border-rule rounded-2xl p-7">
+        <svg width="22" height="18" viewBox="0 0 22 18" class="text-ochre mb-4" aria-hidden="true">
+          <path d="M0 18 L0 10 Q 0 0, 9 0 L 9 4 Q 4 4, 4 10 L 9 10 L 9 18 Z M 13 18 L 13 10 Q 13 0, 22 0 L 22 4 Q 17 4, 17 10 L 22 10 L 22 18 Z" fill="currentColor"/>
+        </svg>
+        <blockquote class="font-serif text-xl text-ink leading-snug pretty">“I printed The 4:47 Sheet on Monday and by Friday my kids had stopped asking for the iPad first. That one page on the fridge is worth it on its own.”</blockquote>
+        <figcaption class="mt-5 text-sm text-ink2/70">
+          <span class="block text-ink font-medium">Sarah K.</span>
+          <span>Mum of two (ages 5 &amp; 8)</span>
+        </figcaption>
+      </figure>
+
+      <div class="mt-5 grid sm:grid-cols-2 gap-5">
+        <figure class="bg-cream border border-rule rounded-2xl p-6">
+          <blockquote class="font-serif text-lg text-ink leading-snug pretty">“Someone in my mothers' group sent it round. Three of us bought it the same week. The witching hour just stopped being the worst part of my day.”</blockquote>
+          <figcaption class="mt-4 text-sm text-ink2/70"><span class="block text-ink font-medium">Renee T.</span><span>Mum of a 4-year-old</span></figcaption>
+        </figure>
+        <figure class="bg-cream border border-rule rounded-2xl p-6">
+          <blockquote class="font-serif text-lg text-ink leading-snug pretty">“What got me was the mess tags. I pick a ‘clean, 5-minute’ box on the days I've got nothing left and I'm not cleaning paint off the wall after.”</blockquote>
+          <figcaption class="mt-4 text-sm text-ink2/70"><span class="block text-ink font-medium">Jess M.</span><span>Mum of two under six</span></figcaption>
+        </figure>
       </div>
     </div>
   </section>
 
-  <!-- ════════════ 8. TESTIMONIALS ════════════ -->
-  <section>
-    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <div class="max-w-2xl mb-12">
-        <p class="caps text-sage mb-4">From parents in the trenches</p>
-        <h2 class="display text-4xl sm:text-5xl text-ink balance">A few words from people who've used it.</h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-        <figure class="bg-cream border border-rule rounded-2xl p-7">
-          <svg width="22" height="18" viewBox="0 0 22 18" class="text-ochre mb-4" aria-hidden="true">
-            <path d="M0 18 L0 10 Q 0 0, 9 0 L 9 4 Q 4 4, 4 10 L 9 10 L 9 18 Z M 13 18 L 13 10 Q 13 0, 22 0 L 22 4 Q 17 4, 17 10 L 22 10 L 22 18 Z" fill="currentColor"/>
-          </svg>
-          <blockquote class="font-serif text-lg text-ink leading-snug pretty">“I bought this on a Sunday night, printed the matrix on Monday morning, and by Friday my kids had stopped asking for the iPad first. That is not an exaggeration. The fridge sheet alone is worth the $29.”</blockquote>
-          <figcaption class="mt-5 text-sm text-ink2/70">
-            <span class="block text-ink font-medium">Sarah K.</span>
-            <span>Mom of two (ages 5 &amp; 8), Minneapolis, MN</span>
-          </figcaption>
-        </figure>
-
-        <figure class="bg-cream border border-rule rounded-2xl p-7 md:translate-y-4">
-          <svg width="22" height="18" viewBox="0 0 22 18" class="text-ochre mb-4" aria-hidden="true">
-            <path d="M0 18 L0 10 Q 0 0, 9 0 L 9 4 Q 4 4, 4 10 L 9 10 L 9 18 Z M 13 18 L 13 10 Q 13 0, 22 0 L 22 4 Q 17 4, 17 10 L 22 10 L 22 18 Z" fill="currentColor"/>
-          </svg>
-          <blockquote class="font-serif text-lg text-ink leading-snug pretty">“What I love is the honesty. Every other activity book lies about the mess. Polly just tells you — this one is Big, this one is Clean — and you pick what your nerves can handle. It feels like she's actually parented a child.”</blockquote>
-          <figcaption class="mt-5 text-sm text-ink2/70">
-            <span class="block text-ink font-medium">James and Priya R.</span>
-            <span>Parents of three, Austin, TX</span>
-          </figcaption>
-        </figure>
-
-        <figure class="bg-cream border border-rule rounded-2xl p-7">
-          <svg width="22" height="18" viewBox="0 0 22 18" class="text-ochre mb-4" aria-hidden="true">
-            <path d="M0 18 L0 10 Q 0 0, 9 0 L 9 4 Q 4 4, 4 10 L 9 10 L 9 18 Z M 13 18 L 13 10 Q 13 0, 22 0 L 22 4 Q 17 4, 17 10 L 22 10 L 22 18 Z" fill="currentColor"/>
-          </svg>
-          <blockquote class="font-serif text-lg text-ink leading-snug pretty">“I gave this to my daughter for her twins' fourth birthday and she cried. In a good way. She said it was the first parenting gift she'd ever received that actually respected how tired she was.”</blockquote>
-          <figcaption class="mt-5 text-sm text-ink2/70">
-            <span class="block text-ink font-medium">Margaret H.</span>
-            <span>Grandmother &amp; retired early-childhood educator</span>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 9. FAQ ════════════ -->
-  <section id="faq" class="border-t border-rule bg-paper/40">
-    <div class="max-w-3xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
-      <p class="caps text-sage mb-4">Frequently asked</p>
-      <h2 class="display text-4xl sm:text-5xl text-ink balance mb-10">Sensible questions, honest answers.</h2>
-
-      <div class="divide-y divide-rule border-y border-rule">
-
-        <details class="group py-6">
-          <summary class="flex items-start justify-between gap-6">
-            <h3 class="font-serif text-xl text-ink">What format is the book?</h3>
-            <span class="faq-icon shrink-0 mt-1 text-ochre text-2xl leading-none">+</span>
-          </summary>
-          <div class="mt-4 text-ink2 leading-relaxed pretty">
-            A PDF, sized for A4 (works fine on US Letter too). About 25 pages. Instant download
-            after checkout — no account, no app, no waiting on an email.
-          </div>
-        </details>
-
-        <details class="group py-6">
-          <summary class="flex items-start justify-between gap-6">
-            <h3 class="font-serif text-xl text-ink">Will this work for my four-year-old? My nine-year-old?</h3>
-            <span class="faq-icon shrink-0 mt-1 text-ochre text-2xl leading-none">+</span>
-          </summary>
-          <div class="mt-4 text-ink2 leading-relaxed pretty">
-            Yes. Each activity has a suggested age range, but they're suggestions, not rules.
-            Trust the kid in front of you over the number on the page.
-          </div>
-        </details>
-
-        <details class="group py-6">
-          <summary class="flex items-start justify-between gap-6">
-            <h3 class="font-serif text-xl text-ink">Do I need any special supplies?</h3>
-            <span class="faq-icon shrink-0 mt-1 text-ochre text-2xl leading-none">+</span>
-          </summary>
-          <div class="mt-4 text-ink2 leading-relaxed pretty">
-            No. Everything in the book uses things you already have — paper, tape, a few
-            socks, the pantry. Nothing requires a Target run or a glue gun.
-          </div>
-        </details>
-
-        <details class="group py-6">
-          <summary class="flex items-start justify-between gap-6">
-            <h3 class="font-serif text-xl text-ink">Can I print it?</h3>
-            <span class="faq-icon shrink-0 mt-1 text-ochre text-2xl leading-none">+</span>
-          </summary>
-          <div class="mt-4 text-ink2 leading-relaxed pretty">
-            Please do. The matrix cheat sheet is designed for the fridge, and the activity
-            pages print cleanly on A4 — black-and-white friendly, no edge-to-edge bleeds.
-          </div>
-        </details>
-
-        <details class="group py-6">
-          <summary class="flex items-start justify-between gap-6">
-            <h3 class="font-serif text-xl text-ink">What's your refund policy?</h3>
-            <span class="faq-icon shrink-0 mt-1 text-ochre text-2xl leading-none">+</span>
-          </summary>
-          <div class="mt-4 text-ink2 leading-relaxed pretty">
-            Thirty days, no questions asked. If you didn't get a single useful idea out of
-            it, write to me and I'll refund you. I'd rather you have your $29 back.
-          </div>
-        </details>
-
-        <details class="group py-6">
-          <summary class="flex items-start justify-between gap-6">
-            <h3 class="font-serif text-xl text-ink">Is this just a list of activities?</h3>
-            <span class="faq-icon shrink-0 mt-1 text-ochre text-2xl leading-none">+</span>
-          </summary>
-          <div class="mt-4 text-ink2 leading-relaxed pretty">
-            No. It's a system. Every activity is double-tagged by mess and prep, the
-            chapters are organised by what kind of energy they spend, and the matrix on
-            page one means you can find the right one in fifteen seconds. The list is
-            only the second-best thing about it.
-          </div>
-        </details>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ════════════ 10. FINAL CTA ════════════ -->
-  <section class="relative overflow-hidden">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 py-24 sm:py-32 text-center relative">
-
-      <!-- big 101 motif behind -->
-      <p aria-hidden="true" class="one-oh-one absolute inset-0 flex items-center justify-center text-paper text-[18rem] sm:text-[26rem] -z-0 select-none pointer-events-none">101</p>
+  <!-- ════════════ CONDITIONS (all 5) + CLOSE ════════════ -->
+  <section class="relative overflow-hidden border-t border-rule">
+    <div class="max-w-3xl mx-auto px-5 py-14 sm:py-20 text-center relative">
+      <p aria-hidden="true" class="one-oh-one absolute inset-0 flex items-center justify-center text-paper text-[14rem] sm:text-[20rem] -z-0 select-none pointer-events-none">101</p>
 
       <div class="relative">
-        <!-- small leaf flourish -->
-        <svg width="40" height="22" viewBox="0 0 40 22" class="mx-auto mb-6 text-sage" aria-hidden="true">
-          <path d="M2 11 Q 14 -2, 20 11 Q 26 24, 38 11" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
-          <circle cx="20" cy="11" r="1.4" fill="#C8881F"/>
-        </svg>
-
-        <h2 class="display text-4xl sm:text-6xl text-ink balance">
+        <h2 class="display text-3xl sm:text-5xl text-ink balance">
           The next 4:47&nbsp;pm is coming.<br/>
-          <span class="italic text-ochre">You can be ready for it.</span>
+          <span class="italic text-ochre">Be ready for it.</span>
         </h2>
 
-        <p class="mt-7 text-lg text-ink2 max-w-xl mx-auto leading-relaxed pretty">
-          The matrix on the fridge. The right activity in fifteen seconds. The quiet evening you've been chasing for months — sitting on the other side of one PDF.
+        <!-- CONDITIONS · value-adds (what's included) -->
+        <p class="mt-6 text-ink2 text-lg leading-relaxed pretty max-w-lg mx-auto">
+          For $19 you get all three: the book (101 activities), <strong class="text-ink">The 4:47 Sheet</strong> for the fridge, and the <strong class="text-ink">Rainy-Day Quick-Start</strong> — plus every future update, free, forever.
         </p>
 
-        <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta mt-10 !text-base !py-4 !px-7">
-          Get the book — $29
-          <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-            <path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-        <p class="mt-5 text-sm text-ink2/70 max-w-md mx-auto">Instant PDF · Price rises to $39 with the next update · Refund plus the answer if it doesn't work first try.</p>
+        <!-- CONDITIONS · price + soft conversion trigger (honest urgency) -->
+        <div class="mt-7 inline-flex flex-col items-center">
+          <p class="font-serif text-4xl text-ink"><span class="text-ochre">$19</span> <span class="text-base text-ink2/60 font-sans">today</span></p>
+          <p class="text-sm text-ink2/70 mt-1">Instant download. On your fridge before tonight's witching hour.</p>
+        </div>
+
+        <div class="mt-7">
+          <a href="https://buy.polar.sh/polar_cl_JvUneWRPzHBIloJMGrzEosF9VXHpTYPk6NnsU0qoAb4" class="cta !py-4 !px-7 !text-base">Get the book — $19 <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 7h11M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+
+        <!-- CONDITIONS · risk reversal (real guarantee, stated plainly) -->
+        <p class="mt-4 text-sm text-ink2/70 max-w-md mx-auto">Try one activity. If it doesn't work first go, email me — I'll refund you and tell you which one would have. 30 days, no questions asked.</p>
+
+        <!-- WHO MADE THIS · peer-register author note (resolves narrator/author identity + real-person trust) -->
+        <div class="mt-12 pt-8 border-t border-rule max-w-md mx-auto flex items-start gap-4 text-left">
+          <!-- PLACEHOLDER: swap src for a real, un-corporate photo of the actual author. Keep it square; CSS crops to a circle. -->
+          <img src="author-placeholder.png" alt="Polly Hayes, who made Beyond the Screen"
+               width="72" height="72"
+               class="w-[72px] h-[72px] rounded-full object-cover shrink-0 border border-rule" />
+          <div>
+            <p class="text-sm text-ink2 leading-relaxed pretty">
+              <span class="text-ink font-medium">I'm Polly Hayes.</span> I'm not a parenting expert — I'm a former primary-school teacher and a mum, and I spent two years building The 4:47 Sheet for the parents I kept watching lose the witching hour, testing every activity until only the ones that actually held a kid were left. The guarantee's real because I'm the one who reads the emails.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
 </main>
 
-<!-- ════════════ FOOTER ════════════ -->
 <footer class="border-t border-rule">
-  <div class="max-w-6xl mx-auto px-5 sm:px-8 py-10 flex flex-col sm:flex-row gap-6 sm:items-center sm:justify-between text-sm text-ink2/70">
+  <div class="max-w-3xl mx-auto px-5 py-8 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between text-sm text-ink2/70">
     <div class="flex items-center gap-2">
-      <svg width="18" height="18" viewBox="0 0 22 22" aria-hidden="true">
-        <circle cx="11" cy="11" r="10" fill="none" stroke="#1A1A1A" stroke-width="1.2"/>
-        <path d="M5 11 Q 11 4, 17 11 Q 11 18, 5 11 Z" fill="none" stroke="#C8881F" stroke-width="1.2"/>
-      </svg>
       <span class="font-serif text-ink">Beyond the Screen</span>
-      <span class="mx-2">·</span>
+      <span class="mx-1">·</span>
       <span>© 2026 Polly Hayes</span>
     </div>
-    <nav class="flex flex-wrap items-center gap-x-6 gap-y-2">
+    <nav class="flex flex-wrap items-center gap-x-5 gap-y-2">
       <a href="#" class="hover:text-ochre transition-colors">Privacy</a>
       <a href="#" class="hover:text-ochre transition-colors">Terms</a>
-      <a href="#top" class="hover:text-ochre transition-colors">Back to top ↑</a>
     </nav>
   </div>
 </footer>
 
 <script>
-  // Sticky header scroll state
   (function () {
     const nav = document.querySelector('header.nav');
     const onScroll = () => {
@@ -1092,18 +532,6 @@
     document.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   })();
-
-  // Close other <details> when one opens (single-open accordion feel)
-  document.querySelectorAll('#faq details').forEach((el) => {
-    el.addEventListener('toggle', () => {
-      if (el.open) {
-        document.querySelectorAll('#faq details').forEach((other) => {
-          if (other !== el) other.open = false;
-        });
-      }
-    });
-  });
 </script>
-
 </body>
 </html>
